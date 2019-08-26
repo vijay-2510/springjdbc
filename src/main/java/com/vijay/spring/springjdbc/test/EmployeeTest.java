@@ -1,5 +1,7 @@
 package com.vijay.spring.springjdbc.test;
 
+import java.util.List;
+
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,15 +16,16 @@ public class EmployeeTest {
 		EmployeeDao employeeDao = (EmployeeDao) context.getBean("employeeDaoImpl");
 		Employee employee = new Employee();
 
-		employee.setId(1);
-		employee.setFirstName("Vikas");
+		employee.setId(3);
+		employee.setFirstName("Vivek");
 		employee.setLastName("Kumar");
 		// int result = employeeDao.createEmployee(employee);
 		// int result = employeeDao.updateEmployee(employee);
-		//int result = employeeDao.deleteEmployee(2);
-		Employee employeeById = employeeDao.getEmployeeById(1);
-		System.out.println(employeeById);
-		context.close();
+		// int result = employeeDao.deleteEmployee(2);
+		// Employee employeeById = employeeDao.getEmployeeById(1);
+		// System.out.println("inserted successfully " + result + " records");
+		List<Employee> employees = employeeDao.getAllEmployees();
+		employees.forEach(e -> System.out.println(e.getId() + " : " + e.getFirstName() + " : " + e.getLastName()));
 	}
 
 }
