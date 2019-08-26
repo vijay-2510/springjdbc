@@ -8,4 +8,6 @@ public interface EmployeeDao {
 	int updateEmployee(Employee employee);
 
 	int deleteEmployee(int id);
+
+	Employee getEmployeeById(int id);
 }
