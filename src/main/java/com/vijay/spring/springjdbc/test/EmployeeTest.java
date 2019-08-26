@@ -15,7 +15,6 @@ public class EmployeeTest {
 				"com/vijay/spring/springjdbc/test/dbconfig.xml");
 		EmployeeDao employeeDao = (EmployeeDao) context.getBean("employeeDaoImpl");
 		Employee employee = new Employee();
-
 		employee.setId(3);
 		employee.setFirstName("Vivek");
 		employee.setLastName("Kumar");
