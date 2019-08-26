@@ -14,11 +14,11 @@ public class EmployeeTest {
 		EmployeeDao employeeDao = (EmployeeDao) context.getBean("employeeDaoImpl");
 		Employee employee = new Employee();
 
-		employee.setId(2);
-		employee.setFirstName("Vijay");
-		employee.setLastName("Pandey");
-
-		int result = employeeDao.createEmployee(employee);
+		employee.setId(1);
+		employee.setFirstName("Vikas");
+		employee.setLastName("Kumar");
+		// int result = employeeDao.createEmployee(employee);
+		int result = employeeDao.updateEmployee(employee);
 
 		System.out.println("inserted successfully " + result + " records");
 	}

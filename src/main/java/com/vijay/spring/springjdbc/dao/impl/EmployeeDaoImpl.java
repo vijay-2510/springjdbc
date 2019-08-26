@@ -16,6 +16,13 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		return records;
 	}
 
+	@Override
+	public int updateEmployee(Employee employee) {
+		String sql = "UPDATE public.\"Employee\"SET firstname=?, lastname=? WHERE id = ?";
+		int records = jdbcTemplate.update(sql, employee.getFirstName(), employee.getLastName(), employee.getId());
+		return records;
+	}
+
 	public JdbcTemplate getJdbcTemplate() {
 		return jdbcTemplate;
 	}
