@@ -18,7 +18,8 @@ public class EmployeeTest {
 		employee.setFirstName("Vikas");
 		employee.setLastName("Kumar");
 		// int result = employeeDao.createEmployee(employee);
-		int result = employeeDao.updateEmployee(employee);
+		// int result = employeeDao.updateEmployee(employee);
+		int result = employeeDao.deleteEmployee(2);
 
 		System.out.println("inserted successfully " + result + " records");
 	}
